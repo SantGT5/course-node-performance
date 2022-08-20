@@ -10,12 +10,12 @@ function delay(duration) {
 }
 
 app.get("/", (req, res) => {
-  res.send("Performance example");
+  res.send(`Performance example: ${process.pid}`);
 });
 
 app.get("/timer", (req, res) => {
-  delay(9000);
-  res.send("Ding ding ding!");
+  delay(4000);
+  res.send(`Ding ding ding! ${process.pid}`);
 });
 
 app.listen(3000);
